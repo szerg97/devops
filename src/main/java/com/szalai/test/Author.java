@@ -5,8 +5,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Book{
+public class Author {
 
-    private String title;
-    private Author author;
+    private String name;
 }

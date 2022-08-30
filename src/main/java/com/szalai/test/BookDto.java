@@ -1,10 +1,10 @@
 package com.szalai.test;
 
+import lombok.Getter;
+
+@Getter
 public class BookDto {
 
     private String title;
-
-    public String getTitle() {
-        return title;
-    }
+    private String author;
 }
