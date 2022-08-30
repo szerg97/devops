@@ -8,6 +8,18 @@ pipeline{
                 bat "mvn clean install"
             }
         }
+        stage("Test") {
+            steps {
+                bat "echo Fake testing..."
+            }
+        }
+        stage("Deploy") {
+            steps {
+                //bat "kubectl apply -f .\\deployment.yaml"
+                //bat "kubectl expose deployment test --port=8080 --target-port=8080 --type=LoadBalancer"
+                bat "echo Fake deploying..."
+            }
+        }
     }
 
     post {
