@@ -15,9 +15,9 @@ pipeline{
         }
         stage("Deploy") {
             steps {
-                bat "kubectl apply -f .\\deployment.yaml"
-                bat "kubectl expose deployment test --port=8080 --target-port=8081 --type=LoadBalancer"
-                //bat "echo Fake deploying..."
+                //bat "kubectl apply -f .\\deployment.yaml"
+                //bat "kubectl expose deployment test --port=8080 --target-port=8081 --type=LoadBalancer"
+                bat "echo Fake deploying..."
             }
         }
     }
