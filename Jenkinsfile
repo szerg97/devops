@@ -28,12 +28,12 @@ pipeline{
         stage("Deploy to k8s") {
             steps {
                 sshagent(['k8s']) {
-                    bat "scp -o StrictHostKeyChecking=no test deployment.yaml szerg"
+                    bat "scp -o StrictHostKeyChecking=no test deployment.yaml szalaigeri@LAPTOP-H25DL4Q7"
                     script {
                         try {
-                            bat "ssh szerg kubectl apply -f ."
+                            bat "ssh szalaigeri@LAPTOP-H25DL4Q7 kubectl apply -f ."
                         } catch (error){
-                            bat "ssh szerg kubectl create -f ."
+                            bat "ssh szalaigeri@LAPTOP-H25DL4Q7 kubectl create -f ."
                         }
                     }
                 }
