@@ -15,6 +15,16 @@ pipeline{
                 }
             }
         }
+        stage("Push image to DockerHub") {
+            steps {
+                script {
+                    withCredentials([string(credentialsId: 'dockerpwd', variable: 'dockerpwd')]) {
+                        bat "docker login -u szalaigeri -p ${dockerpwd}"
+                    }
+                    bat "docker push szalaigeri/test"
+                }
+            }
+        }
     }
     /*
     post {
