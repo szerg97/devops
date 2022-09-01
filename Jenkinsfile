@@ -25,9 +25,10 @@ pipeline{
                 }
             }
         }
-        /*
         stage("Deploy to k8s") {
             steps {
+                bat "echo Fake deployment"
+                /*
                 sshagent(['k8s']) {
                     bat "scp -o StrictHostKeyChecking=no test deployment.yaml szalaigeri@LAPTOP-H25DL4Q7"
                     script {
@@ -38,9 +39,9 @@ pipeline{
                         }
                     }
                 }
+                */
             }
         }
-
     }
     /*
     post {
