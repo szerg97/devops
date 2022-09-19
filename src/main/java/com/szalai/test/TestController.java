@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v14")
+@RequestMapping("/api/v1")
 public class TestController {
 
     private final List<Book> books;
